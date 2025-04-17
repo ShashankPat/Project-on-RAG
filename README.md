@@ -4,10 +4,12 @@ RAG Implementation
 Project Overview
 
 Objective:
+
 Build a RAG‑powered QA system that lets you ask natural‑language questions over your own documents, even if the LLM wasn’t trained on that content.
 
 Technologies & Components:
-LLM: Meta Llama 3 (8 B‑parameter chat model via 🤗 Transformers)
+
+LLM: Meta Llama 3 (8 B‑parameter chat model via Transformers)
 
 Orchestration: LangChain (MIT‑licensed)
 
@@ -18,6 +20,7 @@ Embedding Model: [e.g. OpenAI’s text-embedding-ada-002 or Llama 2 embedding h
 Hosting / Runtime: Python 3.10, PyTorch, CUDA (or 4-bit quantized CPU)
 
 Architecture:
+
 Document Ingestion
 
 Chunk PDFs/TXT → compute embeddings → store in ChromaDB
@@ -48,6 +51,7 @@ EM: 84%
 F1: 91%
 
 Key Learnings & Challenges:
+
 Context Window: managed ~4 k tokens by dynamic chunking & compression
 
 Embedding Quality: experimented with Llama 2 vs. OpenAI embeddings—found cross‑encoder re‑ranking boosted precision by ~5%
@@ -55,6 +59,7 @@ Embedding Quality: experimented with Llama 2 vs. OpenAI embeddings—found cros
 Licensing: navigated Meta’s Community License for Llama 3 (source‑available, not OSI‑open), plus MIT (LangChain) and Apache 2.0 (ChromaDB)
 
 Future Work:
+
 Hybrid Retrieval: combine dense + sparse (BM25) search for broader coverage
 
 Multi‑Doc Reasoning: chain‑of‑thought over multiple retrieved chunks
