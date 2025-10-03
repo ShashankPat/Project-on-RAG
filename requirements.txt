@@ -1,0 +1,33 @@
+# Core Python libraries
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Deep Learning / LLM
+torch>=2.1.0
+transformers>=4.37.0
+accelerate>=0.25.0
+sentencepiece>=0.1.99
+bitsandbytes>=0.42.0   # for 4-bit quantization (CPU/GPU efficiency)
+
+# LangChain & Ecosystem
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-openai>=0.0.5
+
+# Vector Store
+chromadb>=0.4.22
+
+# Embeddings (OpenAI optional)
+openai>=1.10.0
+
+# PDF / Document Processing
+pypdf>=3.17.0
+unstructured>=0.11.0
+tiktoken>=0.5.2   # for token counting/chunking
+
+# Web/API (optional, for FastAPI frontend)
+fastapi>=0.109.0
+uvicorn>=0.27.0
+
+# Dev tools
+python-dotenv>=1.0.0   # for managing API keys
